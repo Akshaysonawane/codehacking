@@ -35,7 +35,7 @@
         </div>    
 
         <div class="form-group">
-            <input type="file" class="form-control" name="file">
+            <input type="file" class="form-control" name="photo_id">
         </div>
 
         <div class="form-group">
