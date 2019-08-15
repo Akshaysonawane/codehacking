@@ -57,6 +57,15 @@
                 <input class="btn btn-primary" type="submit" name="submit" value="Update User">
             </div>
         </form>
+
+        <form action="http://codehacking.test/admin/users/{{ $user->id }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <div class="form-group">
+                <input class="btn btn-danger" type="submit" name="submit" value="Delete User">
+            </div>
+        </form>
+
     </div>
     </div>
 
