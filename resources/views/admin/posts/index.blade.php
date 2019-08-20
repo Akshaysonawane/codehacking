@@ -11,7 +11,9 @@
                 <th>Owner</th>
                 <th>Category</th>
                 <th>Title</th>
-                <th>Content</th>
+                <th>Content</th>\
+                <th>Posts</th>
+                <th>Comments</th>
                 <th>Created</th>
                 <th>Updated</th>
             </tr>
@@ -27,6 +29,8 @@
                     <td>{{ $post->category_id != 0 ? $post->category->name : 'Uncategorized'}}</td>
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->body }}</td>
+                    <td><a href="{{ route('home.post', $post->id) }}">View Post</a></td>
+                    <td><a href="{{ route('comments.show', $post->id) }}">View Comments</a></td>
                     <td>{{ $post->created_at }}</td>
                     <td>{{ $post->updated_at }}</td>
                 </tr>
