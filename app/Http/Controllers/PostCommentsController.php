@@ -94,7 +94,8 @@ class PostCommentsController extends Controller
         $comment = Comment::findOrFail($id);
         $comment->update($request->all());
 
-        return redirect('/admin/comments/'.$comment->post_id);
+        //return redirect('/admin/comments/'.$comment->post_id);
+        return redirect()->back();
     }
     /**
      * Remove the specified resource from storage.
